@@ -1,12 +1,19 @@
+import { Outlet } from 'react-router-dom';
+
+import './App.scss';
+import { Footer } from './components/Footer/Footer';
+import { TopBar } from './components/TopBar/TopBar';
+
+
+
 export const App = () => {
+
+
   return (
-    <h1
-      className=""
-      style={{ color: 'purple' }}
-      onClick={() => {}}
-      onScroll={() => {}}
-    >
-      Basic React App Updated
-    </h1>
+    <>
+      <TopBar />
+      <Outlet />
+      <Footer />
+    </>
   );
 };

@@ -1,0 +1,55 @@
+@import '../../../../styles/styles.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  padding-inline: 18px;
+  padding-bottom: 100px;
+
+  @include on-tablet {
+    padding-inline: 70px;
+    padding-bottom: 144px;
+  }
+
+  @include on-desktop {
+    padding-inline: 48px;
+    padding-bottom: 150px;
+  }
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include on-tablet {
+    column-gap: 24px;
+    row-gap: 32px;
+  }
+
+  @include on-desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__rest {
+    max-height: 1px;
+    overflow: hidden;
+    transition: max-height 1s;
+  }
+}
+
+.article {
+  padding: 16px;
+
+  &__img {
+    width: 100%;
+    padding-bottom: 32px;
+  }
+
+  &__text {
+    font-weight: 700;
+    color: $grey--text;
+    padding-top: 0.8em;
+  }
+}
